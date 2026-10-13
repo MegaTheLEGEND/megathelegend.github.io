@@ -7,7 +7,6 @@
 <title>MegaTheLEGEND</title>
 <meta name="description" content="Projects by MegaTheLEGEND: browser tools, Home Assistant integrations, Android apps, and servers.">
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😺</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -25,7 +24,8 @@
   body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); }
   main { max-width: 50rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
   h1 { font: 800 clamp(2.6rem, 11vw, 5.5rem)/0.95 var(--head); letter-spacing: -0.035em; margin: 0; overflow-wrap: anywhere; }
-  .name { font: 500 1.6rem/1.2 var(--head); margin: 0.6rem 0 0; color: var(--muted); }
+  .name { display: flex; align-items: center; gap: 0.85rem; font: 500 1.6rem/1.2 var(--head); margin: 1rem 0 0; color: var(--muted); }
+  .name img { width: 3.5rem; height: 3.5rem; border-radius: 50%; object-fit: cover; border: 2px solid var(--line); flex: none; }
   .intro { max-width: 36rem; margin: 1.75rem 0 1rem; color: var(--muted); font-size: 1.15rem; }
   .note { max-width: 36rem; margin: 0 0 1rem; color: var(--muted); font-size: 0.95rem; }
   h2.group { font: 800 1.9rem/1.1 var(--head); letter-spacing: -0.02em; margin: 3rem 0 1rem; }
@@ -55,7 +55,7 @@
   <header>
     <div>
       <h1>MegaTheLEGEND</h1>
-      <p class="name">Sean</p>
+      <p class="name"><img src="assets/pfp.jpg" width="56" height="56" alt="A tortoiseshell cat wearing a blue hat"><span>Sean</span></p>
     </div>
   </header>
 
