@@ -1,357 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega_TheLEGEND - About Me</title>
-
-
-    <style>
-        @font-face {
-            font-family: unnecessary;
-            src: url('assets/unnecessaryv3.ttf');
-        }
-
-        @font-face {
-            font-family: ubuntu;
-            src: url('assets/Ubuntu-Regular.ttf');
-        }
-        
-        @font-face {
-            font-family: ubuntu-light;
-            src: url('assets/Ubuntu-Light.ttf');
-        }
-
-        a {
-            text-decoration: none;
-            color: Black;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        .header {
-            width: 100%;
-            height: 50px;
-            margin: 0 auto;
-            text-align: right;
-            background-color: #1e1e1e;
-        }
-
-        .darkmode--activated .header {
-            background-color: #e1e1e1;
-        }
-
-        .footer {
-            width: 100%;
-            height: 50px;
-            margin: 0 auto;
-            text-align: right;
-            background-color: #ffffff;
-        }
-
-
-        .container {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .profile-image {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .aka {
-            font-family: ubuntu-light;
-        }
-
-
-
-        .bio {
-            margin-top: 20px;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-            .social-links a {
-                color: #333;
-                text-decoration: none;
-                margin: 0 10px;
-                font-size: 24px;
-            }
-
-        .projects-section {
-            margin-top: 40px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .project {
-            margin: 30px;
-            padding: 24px;
-            background-color: #fff;
-            box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-            border-radius: 15px;
-            text-align: left;
-            text-decoration: none;
-            width: 50%;
-        }
-
-            .project h2 {
-                margin-top: 0;
-            }
-
-        .project-description {
-            margin-top: 10px;
-        }
-
-        #giticon {
-            width: 40px;
-            height: auto;
-            top: -35px;
-            position: relative;
-            filter: invert(1);
-        }
-
-        #unnecessary-project {
-            background-image: linear-gradient(45deg, indianred, grey);
-            width: 54%;
-        }
-
-            #unnecessary-project h2 {
-                font-family: unnecessary;
-            }
-
-        #filez-project {
-            width: 70%;
-            background-image: linear-gradient(45deg, red, green, blue);
-        }
-
-            #filez-project img {
-                width: 50px;
-                padding-right: 14px;
-            }
-
-        #math-project {
-            width: 59%;
-            background-image: linear-gradient(45deg, yellow, #2196f3);
-        }
-
-            #math-project img {
-                width: 50px;
-                padding-right: 14px;
-            }
-
-        #mci-project {
-            width: 68%;
-            background-image: linear-gradient(45deg, #1b23ff, #00ff0c);
-        }
-            #mci-project img {
-                width: 63px;
-                padding-right: 0px;
-            }
-
-
-        #projects-container {
-            
-        }
-
-        .projectBanner {
-            text-align: left;
-            padding-left: 31px;
-        }
-
-
-
-
-        /* begin darkmode slider styles */
-        .slider-container {
-            display: flex;
-            align-items: center;
-            top: 13.5px;
-            position: relative;
-            left: 33px;
-            width: 50px;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 40px;
-            height: 20px;
-        }
-
-            .switch input[type="checkbox"] {
-                display: none;
-            }
-
-        .darkmodeSlider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 20px;
-        }
-
-            .darkmodeSlider:before {
-                position: absolute;
-                content: "";
-                height: 18px;
-                width: 18px;
-                left: 2px;
-                bottom: 1px;
-                background-color: white;
-                transition: 0.4s;
-                border-radius: 50%;
-            }
-
-        input[type="checkbox"]:checked + .darkmodeSlider {
-            background-color: #ffd700;
-        }
-
-            input[type="checkbox"]:checked + .darkmodeSlider:before {
-                transform: translateX(18px);
-            }
-
-        #lightIcon {
-            align-items: center;
-            top: 13.5px;
-            position: absolute;
-            left: 7px;
-            width: 20px;
-            height: auto;
-            display: flex;
-            filter: invert(1);
-        }
-
-        #darkIcon {
-            align-items: center;
-            top: 13.5px;
-            position: absolute;
-            left: 81px;
-            width: 20px;
-            height: auto;
-            display: flex;
-            filter: invert(1);
-        }
-
-
-        /* end darkmode slider styles */
-
-
-    </style>
-
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>MegaTheLEGEND</title>
+<meta name="description" content="Projects by MegaTheLEGEND: browser tools, Home Assistant integrations, Android apps, and servers.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e8ebea; --ink: #151a1f; --muted: #55606a; --line: #b9c0c4; --accent: #2644e6;
+    --head: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #12171c; --ink: #e9edef; --muted: #98a3ab; --line: #2e3841; --accent: #7e92ff; }
+  }
+  :root { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); }
+  main { max-width: 50rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+  h1 { font: 800 clamp(2.6rem, 11vw, 5.5rem)/0.95 var(--head); letter-spacing: -0.035em; margin: 0; overflow-wrap: anywhere; }
+  .name { font: 500 1.6rem/1.2 var(--head); margin: 0.6rem 0 0; color: var(--muted); }
+  .intro { max-width: 36rem; margin: 1.75rem 0 1rem; color: var(--muted); font-size: 1.15rem; }
+  .note { max-width: 36rem; margin: 0 0 1rem; color: var(--muted); font-size: 0.95rem; }
+  h2.group { font: 800 1.9rem/1.1 var(--head); letter-spacing: -0.02em; margin: 3rem 0 1rem; }
+  .project { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.25rem 1.5rem; border-top: 1px solid var(--line); padding: 1.3rem 0; }
+  .project:last-of-type { border-bottom: 1px solid var(--line); }
+  .when { color: var(--muted); font-size: 0.92rem; padding-top: 0.2rem; }
+  h3 { font: 500 1.3rem/1.2 var(--head); margin: 0 0 0.35rem; }
+  @font-face { font-family: "Unnecessary"; src: url("assets/unnecessaryv3.ttf") format("truetype"); font-display: swap; }
+  .glyph { font-family: "Unnecessary", sans-serif; font-weight: 400; font-synthesis: none; margin-left: 0.7rem; font-size: 1.15em; }
+  h3 a { color: var(--ink); text-decoration: none; }
+  h3 a:hover { color: var(--accent); }
+  .project p { margin: 0; color: var(--muted); max-width: 38rem; }
+  .tag { font-size: 0.9rem; color: var(--muted); margin-top: 0.4rem; }
+  .tag b { font-weight: 500; color: var(--ink); }
+  footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  @media (max-width: 34rem) { .project { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: no-preference) {
+    h1 { animation: settle 0.7s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes settle { from { letter-spacing: 0.02em; opacity: 0; } to { letter-spacing: -0.035em; opacity: 1; } }
+  }
+</style>
 </head>
 <body>
-    <div class="header">
-        <img id="lightIcon" src="assets/light-mode.svg" alt="lightIcon">
-        <div class="slider-container">
-            <label class="switch">
-                <input type="checkbox" id="darkmodeSlider">
-                <span class="darkmodeSlider"></span>
-            </label>
-        </div>
-        <img id="darkIcon" src="assets/dark-mode.png" alt="darkIcon">
-        <div class="social-links">
-            <a href="https://github.com/MegaTheLEGEND" target="_blank" rel="noopener noreferrer">
-                <img id="giticon" src="assets/github-icon.png" alt="GitHub">
-            </a>
-        </div>
+<main>
+  <header>
+    <div>
+      <h1>MegaTheLEGEND</h1>
+      <p class="name">Sean</p>
     </div>
+  </header>
 
-    <div class="container">
-        <img src="assets/pfp.jpg" alt="Mega_TheLEGEND" class="profile-image">
-        <h1>Sean</h1>
-        <h2 class="aka">AKA Mega_TheLEGEND</h2>
-        <p class="bio">Passionate about coding, gaming, and technology. Turning boredom into code!</p>
-        <br>
-        <br>
-        <div id="projects-container">
-            <h2 class="projectBanner">Projects</h2>
-            <div class="projects-section">
-                <div id="math-project" class="project" onclick=location.href='https://math-assist.github.io'>
-                    <h2><img src="https://raw.githubusercontent.com/MegaTheLEGEND/legend/main/EmbeddedImage.png" alt=""><a href="https://math-assist.github.io">MATH.assist</a></h2>
-                    <p class="project-description">Games website with "educational math" games.</p>
-                </div>
-                <div id="filez-project" class="project" onclick=location.href='https://megathelegend.github.io/FileZ-client'>
-                    <h2><img src="assets/Z.png" alt=""><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h2>
-                    <p class="project-description">Another games website running in the file:// protocol.</p>
-                </div>
-                <div id="mci-project" class="project" onclick=location.href='https://mega-chaos-industries.github.io'>
-                    <h2><img src="assets/mci.png" alt=""><a href="https://mega-chaos-industries.github.io">Mega Chaos Industries</a></h2>
-                    <p class="project-description">My small company. (that i'm the co-founder of) I also do the web developement for it. (to lazy to start)</p>
-                </div>
-                <div id="unnecessary-project" class="project" onclick=location.href='https://megathelegend.github.io/unnecessary'>
-                    <h2><a href="https://megathelegend.github.io/unnecessary">Unnecessary</a></h2>
-                    <p class="project-description">Just a full langauge using glyphs originaly drawn by Avery.</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </div>
+  <p class="intro">I build browser tools, smart-home integrations, Android apps, and game servers. Most of it starts with "I wonder if that's possible."</p>
+  <p class="note">Several recent projects were built by directing AI agents. I say so at the top of each README.</p>
+
+  <h2 class="group">Recent work</h2>
+
+  <article class="project">
+    <div class="when">Oct 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/RVC-in-browser">RVC-in-browser</a></h3>
+      <p>A voice changer that runs entirely in your browser. Load an RVC voice model, then convert an audio file or your microphone live. Nothing is uploaded. It covers inference only; training isn't included yet.</p>
+      <div class="tag"><b>JavaScript</b> · AI-directed</div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  </article>
 
-    <div class="footer" alt="this is where the feet go!">
-
+  <article class="project">
+    <div class="when">Oct 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/CraftHub">CraftHub</a></h3>
+      <p>A self-hosted launcher for the open-source Craft apps. One small Rust binary in a Docker image watches GitHub releases, verifies checksums, hosts each web build, handles version pinning and rollback, and signs users in through OpenID Connect.</p>
+      <div class="tag"><b>Rust</b> · AI-directed · a launcher only; I didn't make the apps</div>
     </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Oct 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/demo-launcher">demo-launcher</a></h3>
+      <p>A GitHub Pages demo of the launcher's web build. A workflow mirrors each app's latest release every six hours so the apps can run straight from a browser.</p>
+      <div class="tag"><b>JavaScript</b> · GitHub Actions</div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Oct 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/skylight_calendar">Skylight for Home Assistant</a></h3>
+      <p>A full Home Assistant integration for the Skylight Calendar Frame. It covers calendar events, chores, meals, tasks, lists, reward stars, frame controls and photo upload, with OAuth2 sign-in. Now at v3.0.0.</p>
+      <div class="tag"><b>Python</b> · HACS</div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Oct 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/spindle-android">Spindle</a></h3>
+      <p>Rip DVDs from your phone. Plug in a USB optical drive and save a full ISO, or pick titles and convert them to MP4. A working prototype built to find out whether it was possible.</p>
+      <div class="tag"><b>Kotlin</b> · Android · AI-directed</div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">May 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/Zepp-OS-Home-Assistant-Cameras">Home Assistant Cameras for Zepp OS</a></h3>
+      <p>See Home Assistant camera snapshots on a smartwatch. It started as a Blue Iris app until that API got in the way. It works, with a few bugs.</p>
+      <div class="tag"><b>JavaScript</b> · mostly AI-generated</div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Jan 2026</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/Windows-audio-balance-fix">Windows audio balance fix</a></h3>
+      <p>A small Python tool, packaged as an EXE, that fixes left/right balance drift in Windows after changing volume with a headphone encoder.</p>
+      <div class="tag"><b>Python</b></div>
+    </div>
+  </article>
+
+  <h2 class="group">Earlier projects</h2>
+
+  <article class="project">
+    <div class="when">2025</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/HA-BeReal-Sensor">BeReal Time sensor</a> and <a href="https://github.com/MegaTheLEGEND/StayReal-Android">StayReal Android</a></h3>
+      <p>A Home Assistant sensor that tells you when the daily BeReal moment happens, plus an Android build of StayReal, an open-source, privacy-focused alternative client.</p>
+      <div class="tag"><b>Python</b> · <b>Kotlin</b></div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">2024</div>
+    <div>
+      <h3><a href="https://github.com/MegaTheLEGEND/Mega_Server">Mega_Server</a></h3>
+      <p>One Minecraft server that Java, Bedrock and Eaglercraft 1.8 players can all join, using Paper with translation plugins. It has 9 stars and 7 forks.</p>
+      <div class="tag"><b>Batchfile</b> · Java · Bedrock · Eaglercraft</div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">2024</div>
+    <div>
+      <h3><a href="https://megathelegend.github.io/FileZ-client">File-Z</a></h3>
+      <p>A games site that runs entirely from the file:// protocol, with a Node.js backend.</p>
+      <div class="tag"><b>HTML</b> · <b>JavaScript</b> · <a href="https://github.com/MegaTheLEGEND/File-Z-backend">backend</a></div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Earlier</div>
+    <div>
+      <h3><a href="https://megathelegend.github.io/unnecessary">Unnecessary<span class="glyph" aria-hidden="true">Unnecessary</span></a></h3>
+      <p>A full written language that uses glyphs originally drawn by a friend.</p>
+      <div class="tag"><b>Web</b></div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="when">Sites</div>
+    <div>
+      <h3><a href="https://math-assist.github.io">MATH.assist</a> and <a href="https://mega-chaos-industries.github.io">Mega Chaos Industries</a></h3>
+      <p>An educational math games site, and the website for a small company I co-founded.</p>
+      <div class="tag"><b>Web</b></div>
+    </div>
+  </article>
+
+  <footer>
+    I also keep forks of projects I tinker with, like UV-K5 radio firmware mods, an ESP32 OBD2 gauge and Home Assistant core. The rest is on <a href="https://github.com/MegaTheLEGEND">GitHub</a>.
+  </footer>
+</main>
+
 </body>
 </html>
-
-
-<script>
-    const options = {
-        bottom: '32px', // default: '32px'
-        right: 'unset', // default: '32px'
-        left: '32px', // default: 'unset'
-        time: '0.5s', // default: '0.3s'
-        mixColor: '#fff', // default: '#fff'
-        backgroundColor: '#fff',  // default: '#fff'
-        buttonColorDark: '#0d1117',  // default: '#100f2c'
-        buttonColorLight: 'white', // default: '#fff'
-        saveInCookies: true, // default: true,
-        label: '🌓', // default: ''
-        autoMatchOsTheme: true // default: true
-    }
-
-    const darkmode = new Darkmode(options);
-
-    const slider = document.getElementById('darkmodeSlider');
-
-    slider.addEventListener('click', () => {
-
-        if (slider.checked) {
-            darkmode.toggle();
-            console.log('Slider is ON');
-        } else {
-            darkmode.toggle();
-            console.log('Slider is OFF');
-        }
-    });
-
-
-    window.addEventListener('load', () => {
-
-        const darkModeActivated = document.body.classList.contains('darkmode--activated');
-        slider.checked = darkModeActivated;
-
-
-    });
-
-
-</script>
